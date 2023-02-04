@@ -123,9 +123,9 @@ color: var(--primary-text-color)
 .navigation-link:focus {
     color: var(--secondary-accent-color);
 }
-.navigation-link.current{
+/* .navigation-link.current{
 background-color: var(--dark-background-text);
-}
+} */
 
 .navigation-items:not(:last-child) {
     margin-right: 40px;
@@ -297,7 +297,7 @@ background-color: var(--primary-accent-color);
 } */
 
 .team-list{
-    margin-top: 32px;
+    margin-top: 8px;
     gap: 24px;
     justify-content: center;  
 }
@@ -317,7 +317,7 @@ background-color: var(--primary-accent-color);
 
 }
 .social-link:hover,
-.social-link-icon:focus {
+.social-link:focus {
     background-color: var(--secondary-accent-color);
 }
 /* ============ Portfolio btn ============ */
@@ -379,12 +379,15 @@ background-color: var(--primary-accent-color);
     border: 1px solid rgba(46, 47, 66, 0.08);
     border-top: transparent;
 }
-.portfolio-items:hover,
-.portfolio-items:focus {
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-}
+.portfolio-items:hover{
+    border: var(--dark-background-text);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);}
+
 .portfolio-name {
     margin-bottom: 8px;
+}
+.portfolio-filter{
+    color: var(--secondary-text-color);
 }
 /* ============ Coustumers============  */
 .customers{
@@ -403,10 +406,6 @@ background-color: var(--primary-accent-color);
 .coustomers-items {
   flex-basis: calc((100% - 5 * 24px) / 6);
     height: 88px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #AFB1B8;
-    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,18 +417,22 @@ background-color: var(--primary-accent-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #AFB1B8;
+    border-radius: 4px;
 }
 .coustomers-items-icon{
     width: 104px;
     height: 56px;
     fill: #AFB1B8;
 }
-.coustomers-items:is(:hover, :focus) .coustomers-items-icon {
-    fill: var(--secondary-accent-color);
-}
-.coustomers-items:hover, 
-.coustomers-items:focus {
+
+.coustomers-items-link:is(:hover, :focus) {
     border-color: var(--secondary-accent-color);
+}
+.coustomers-items-link:is(:hover, :focus) .coustomers-items-icon {
+    fill: var(--secondary-accent-color);
 }
 
 /* ============ Footer ============ */
